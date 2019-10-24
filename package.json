@@ -3,10 +3,12 @@
   "version": "1.0.0-dev",
   "description": "A nice signalr version, without a jquery dependency",
   "main": "dist/jqueryless-signalr.js",
+  "module": "src/signalr.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/sateffen/jqueryless-signalr"
   },
+  "files": ["src"],
   "keywords": [
     "signalr",
     "signalr-client",
