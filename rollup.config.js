@@ -1,18 +1,17 @@
-/* global require, module*/
-const commonjs = require('rollup-plugin-commonjs');
-const nodeResolve = require('rollup-plugin-node-resolve');
-const buble = require('rollup-plugin-buble');
+import commonjs from '@rollup/plugin-commonjs';
+import nodeResolve from '@rollup/plugin-node-resolve';
 
 module.exports = {
-    entry: 'src/signalr.js',
-    format: 'umd',
-    dest: 'dist/jqueryless-signalr.js',
-    moduleName: "SignalR",
+    input: 'src/signalr.js',
+    output: {
+        format: 'umd',
+        file: 'dist/jqueryless-signalr.js',
+        name: "SignalR"
+    },
     plugins: [
         nodeResolve(),
         commonjs({
             include: ['node_modules/**']
-        }),
-        buble()
+        })
     ]
 };
